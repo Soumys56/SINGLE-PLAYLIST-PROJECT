@@ -1,0 +1,71 @@
+@media screen and (max-width:1392px)
+  {
+    .middle-part-navbar {
+        display: flex;
+        width: 30%;
+        margin-left: 1rem;
+      }
+
+  }
+
+  @media screen and (max-width:1133px)
+  {
+    .extras{
+		display: flex;
+		padding: 1rem 1rem;
+        justify-content: flex-end;
+		
+	   }
+       .player{
+        margin-left: 2rem;
+       }
+       .song-desc{
+        
+        font-size: 0.7rem;
+    }
+
+  }
+
+  @media screen and (max-width:1072px)
+     {
+        .carousel{
+            margin-left: 3rem;
+            width: 90%;
+          
+          height: 30vh;
+          
+          background-repeat: no-repeat;
+          
+          background-image: url(media/crousel/image1.jpg);
+          
+          
+          background-size: cover;
+          box-shadow: 10px 10px 10px 10px black;
+          animation: slider 12s infinite linear ;
+          margin-bottom: 1rem;
+        }
+
+     }
+
+     @media screen and (max-width:954px)
+  {
+    .navber-logo{
+        width: 20%;
+        
+        
+        
+        
+        }
+
+
+        .navber-logo img{
+            height: 10vh;
+             width: 100%;
+            
+             
+            }
+            .animate-charcter{
+                font-size: 0.5rem;
+            }
+
+  }

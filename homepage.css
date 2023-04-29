@@ -1,0 +1,576 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+     
+}
+body{
+   background: #153957;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* removing margin for all the textual elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0px;
+}
+
+/* removing all the styles from the links and formatting them white */
+a {
+	text-decoration: none;
+	color: white;
+}
+#nabbarid{
+
+    height: auto;
+	width: auto;
+	background-image: linear-gradient(180deg, black, rgba(0, 0, 0, 0));
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding-left: 5%;
+	padding-right: 5%;
+	transition: all ease-in-out 1s; /* when the navbar loads, every property transits for 1s */
+
+}
+.left-part-navaber{
+    display: flex;
+  
+}
+.navber-logo{
+width: 40%;
+
+
+
+
+}
+.navber-logo img{
+height: 10vh;
+ width: 100%;
+ border-radius: 100%;
+animation-name: rotating;
+animation-timing-function: ease-in-out;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+ 
+}
+/* animation for the website logo */
+@keyframes rotating {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.navbar-text{
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+
+}
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 1rem;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.middle-part-navbar{
+    display: flex;
+    width: 50%;
+    margin-left: 3rem;
+
+}
+.search-bar{
+    display: flex;
+}
+.right-part-navbar{
+    width: 30%;
+}
+@keyframes flexible {
+	75% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+.fav-text {
+    animation-name: flexible;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2s;
+	perspective: 10000px;
+	transform-style: preserve-3d;
+	animation-iteration-count: infinite;
+    position: relative;
+    left: 10%;
+}
+.search-bar {
+	width: 40%;
+	position: relative;
+   left: 40%;
+}
+/* changing the default style of the input bar */
+.search-bar input {
+	width: 100%;
+	font-size: 16px;
+	text-decoration: none;
+	border-radius: 18px;
+	border: none;
+	padding: 5px;
+	font-weight: 500;
+	text-align: center;
+	transition: all ease-in-out 0.1s;
+    background-color: black;
+  
+}
+
+
+/* search icon for input bar */
+.search-ico {
+	color: white
+}
+/* mic icon for input */
+.mic-ico {
+	color:white;
+}
+/* search icon */
+.search-bar > div:nth-child(1) {
+	display: inline-block;
+	position: absolute;
+	width: min-content;
+	left: 4%;
+	top: 15%;
+	transition: all ease-in-out 0.1s;
+}
+/* mic icon */
+.search-bar > div:nth-child(3) {
+	display: inline-block;
+	position: absolute;
+	width: min-content;
+	right: 4%;
+	top: 15%;
+	transition: all ease-in-out 0.1s;
+}
+/* when the user clicks on the search bar, there should be no blue outlining */
+input:focus {
+	outline: none;
+}
+.right-part-navbar{
+    display: flex;
+
+}
+.notification{
+    display: flex;
+}
+.notification img{
+    width: 20%;
+    animation-name: ringing_bell;
+	animation-duration: 0.3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+.notification h4{
+    margin-top: 1.5rem;
+} 
+
+.profile-img img{
+   width: 40px;
+   
+    border: 2px solid white;
+    border-radius: 100%;
+    position: relative;
+    top: 20%;
+    right:30%;
+    
+}
+
+@keyframes ringing_bell {
+	0% {
+		transform: rotate(-15deg);
+	}
+	50% {
+		transform: rotate(15deg);
+	}
+	100% {
+		transform: rotate(-15deg);
+	}
+}
+
+
+/* nav compleate */
+main {
+	width: 100%;
+	padding: 1% 3%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	transition: all ease-in-out 1s;
+	z-index: 1;
+}
+.aside {
+	display: inline-block;
+	overflow: hidden;
+}
+/* section one of the main part */
+.section-1 {
+	width: 70%;
+	height: 85vh;
+	overflow: scroll;
+	scrollbar-width: none;
+}
+.section-1::-webkit-scrollbar{
+	display: none;
+}
+.section-2 {
+	width: 28%;
+	height: 85vh;
+	z-index: 2;
+	
+
+}
+.banner-container{
+    display: flex;
+
+    width: 90%;
+    height: auto;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background-color:#141b41 ;
+    background-size: contain;
+   
+}
+.banner-image-container img{
+    height: 280px;
+    width: 250px;
+    
+   
+}
+h1{
+	text-transform: uppercase;
+	background-image: linear-gradient(
+	  -225deg,
+	  #153957 0%,
+	  #44107a 29%,
+	  #aa224f 67%,
+	  #fff800 100%
+	);
+	background-size: auto auto;
+	background-clip: border-box;
+	background-size: 200% auto;
+	color: #fff;
+	background-clip: text;
+	
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: textclip 2s linear infinite;
+	display: inline-block;
+		font-size: 1.5rem;
+
+}
+@keyframes textclip {
+	to {
+	  background-position: 200% center;
+	}
+  }
+  .banner-text{
+    padding: 1rem 0.5rem;
+  }
+  .banner-second-text{
+    margin-top: 0.4rem;
+  }
+  .banner-third-text{
+    margin-top: 0.4rem;
+  }
+  .banner-third-text p{
+    font-size: 0.8rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+  }
+  .banner-button-follow{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0.3rem;
+    
+  }
+  .banner-button-follow button{
+    width: 100px;
+    height: 35px;
+    margin-right: 4rem;
+    background:linear-gradient(to left,blue,gray);
+  }
+  .banner-fourth-text{
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+  .follower-text{
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+  .follower-text h6{
+    width: 100px;
+    font-size: 0.7rem;
+    
+  }
+  .playlist-section{
+	display: flex;
+	flex-direction: column;
+	margin-top: 3rem;
+  }
+  .playlist-section-1{
+	display: flex;
+	width: 100%;
+	background: #141b41;
+	padding: 1rem 0.3rem;
+	position: relative;
+	margin-bottom: 0.5rem;
+	
+
+  }
+  .playlist-section-1:hover{
+	border: 1px solid white;
+	transform: scale(0.8);
+  }
+  .playlist-section-1-img img{
+	height: 40px;
+	width: 40px;
+  }
+  .logo {
+	position: absolute;
+	right: 5%;
+  }
+
+  .playlist-section-1-span{
+	right: 40%;
+	position: absolute;
+  }
+  .playlist-section-1-text{
+	position: absolute;
+	left: 15%;
+	top: 1%;
+  }
+  .playlist-section-1-img {
+	position: absolute;
+	left: 5%;
+	bottom: 4%;
+  }
+  .logo i{
+	margin-left: 0.5rem;
+  }
+
+
+  footer {
+	position: fixed;
+	bottom: 1px;
+	width: 100%;
+	height: 60px;
+	background-color: #282828;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: nowrap;
+	padding: 0px 3%;
+	box-sizing: border-box;
+	z-index: 6;
+}
+#song-image img{
+	width: 40px;
+	height: 40px;
+	margin-top: 0.5rem;
+}
+.active-song-description{
+	display: flex;
+}
+.song-desc{
+	display: flex;
+	flex-direction: column;
+	margin-top: 0.5rem;
+	margin-left: 2rem;
+	font-size: 0.8rem;
+}
+.heart-and-ban-icon{
+	margin-left: 1rem;
+}
+.heart-and-ban-icon{
+	display: flex;
+	margin-top: 0.5rem;
+	margin-left: 2rem;
+
+}
+
+.heart-and-ban-icon span:nth-child(2)
+       {
+          margin-left: 5px;
+	   }
+ .player{
+		display: flex;
+		flex-direction: column;
+	   }
+	   .controls{
+		display: flex;
+		padding: 0.5rem 1rem;
+	   }
+	   .controls div{
+		margin-left: 4rem;
+	   }
+	   #slider{
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 1rem;
+	   }
+	   
+	   .slidecontainer input{
+		width: 400px;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+	   }
+	   .time{
+		font-size: 0.8rem;
+	   }
+	   .extras{
+		display: flex;
+		padding: 1rem 1rem;
+		
+	   }
+	  .slider{
+		width: 30%;
+	  }
+	  .slider input{
+		width: 100%;
+	  }
+	  .extras div{
+		margin-left: 1rem;
+	  }
+	  .Latest-english-img:hover{
+		transform: scale(1.1);
+		cursor: pointer;
+		
+	  }
+	 .Latest-hindi-img:hover{
+		transform: scale(1.1);
+		cursor: pointer;
+		
+	  }
+	  #similart_artist{
+		height: 40vh;
+		overflow: scroll;
+
+	  }
+	  .similart-artist_heading{
+		display: flex;
+		justify-content: space-between;
+		padding: 0.5rem 0.8rem;
+		margin-bottom: 0.5rem;
+		
+	  }
+	 
+	  .first-container{
+		display: flex;
+		
+		position: relative;
+		margin-bottom: 0.5rem;
+        
+
+	  }
+
+
+	  .first-container:hover{
+		border: 1px solid white;
+		background: transparent;
+
+	  }
+	  .container_img img{
+		height: 100px;
+		width: 100px;
+	  }
+	  .container-text{
+		position: absolute;
+	    left: 40%;
+		top: 30%;
+
+	  }
+	  .container_logo{
+		position: absolute;
+		right: 2%;
+		display: flex;
+		flex-direction: column;
+	  }
+	  .recently_played_heading{
+		display: flex;
+		justify-content: space-between;
+		padding: 0.5rem 1rem;
+	  }
+	  #recently-played{
+		overflow: scroll;
+		height: 45vh;
+		scrollbar-width: none;
+	  }
+	  #recently-played::-webkit-scrollbar{
+		display: none;
+	  }
+
+	  .recently-played-first-container{
+		padding: 0rem 0.5rem;
+		display: flex;
+		position: relative;
+		border: 1px solid white;
+		margin-bottom: 0.5rem;
+		background-color: #141b41;
+	  }
+	  .recently-played-container_img img{
+		height: 50px;
+		width: 50px;
+	  }
+	  .span{
+		padding: 0.5rem 0.3rem;
+	  }
+	.recently-played-first-container-text{
+		position: absolute;
+		left: 30%;
+		top: 5%;
+	}
+	.recently-played-first-container_logo{
+		position: absolute;
+		right: 5%;
+		padding: 0.5rem;
+	}
